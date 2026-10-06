@@ -1,0 +1,2393 @@
+<!doctype html>
+<html lang="ta">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lanka Contracting — தரமான வீட்டு கட்டுமான சேவை | GTA</title>
+    <meta
+      name="description"
+      content="Lanka Contracting — டொராண்டோவில் தமிழ் சமூகத்திற்கான நம்பகமான கட்டுமான நிறுவனம். ஓடு பதித்தல், மின்சார வேலை, அடித்தள அமைப்பு, முற்றத்து கொட்டகை."
+    />
+    <meta name="theme-color" content="#1C060B" />
+
+    <meta
+      property="og:title"
+      content="Lanka Contracting — தரமான வீட்டு கட்டுமான சேவை"
+    />
+    <meta
+      property="og:description"
+      content="ஓடு பதித்தல் • மின்சார வேலை • அடித்தள அமைப்பு • முற்றத்து கொட்டகை. கிரேட்டர் டொராண்டோ பகுதி."
+    />
+    <meta property="og:type" content="website" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;600;700;800&family=Noto+Serif+Tamil:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        /* ── Sri Lanka flag palette ── */
+        --maroon-950: #12040a;
+        --maroon-900: #1c060b;
+        --maroon-800: #2c0912;
+        --maroon-700: #4a0f1e;
+        --maroon: #8d153a;
+        --maroon-400: #b22850;
+        --gold: #f2b705;
+        --gold-soft: #ffd469;
+        --gold-deep: #c99400;
+        --orange: #ff7900;
+        --green: #0b5d4e;
+        --green-soft: #12876f;
+
+        --text: #fdf8f3;
+        --muted: #c4a6a8;
+        --line: rgba(242, 183, 5, 0.16);
+        --card: rgba(255, 255, 255, 0.032);
+        --card-hi: rgba(255, 255, 255, 0.06);
+
+        --radius: 18px;
+        --maxw: 1180px;
+
+        --font-ta: "Noto Sans Tamil", "Inter", system-ui, sans-serif;
+        --font-head: "Noto Serif Tamil", "Inter", Georgia, serif;
+        --font-en: "Inter", system-ui, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+        -webkit-text-size-adjust: 100%;
+      }
+      body {
+        background: var(--maroon-950);
+        color: var(--text);
+        font-family: var(--font-ta);
+        line-height: 1.68;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+      }
+      html[lang="en"] body {
+        font-family: var(--font-en);
+        line-height: 1.62;
+      }
+
+      /* ambient glow */
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 0;
+        background:
+          radial-gradient(
+            900px 620px at 8% -8%,
+            rgba(141, 21, 58, 0.36),
+            transparent 62%
+          ),
+          radial-gradient(
+            760px 520px at 96% 4%,
+            rgba(242, 183, 5, 0.1),
+            transparent 62%
+          ),
+          radial-gradient(
+            700px 600px at 50% 108%,
+            rgba(11, 93, 78, 0.16),
+            transparent 62%
+          );
+      }
+
+      .wrap {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: 0 22px;
+        position: relative;
+        z-index: 1;
+      }
+
+      h1,
+      h2,
+      h3,
+      .head {
+        font-family: var(--font-head);
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: -0.01em;
+      }
+      html[lang="en"] h1,
+      html[lang="en"] h2,
+      html[lang="en"] h3,
+      html[lang="en"] .head {
+        letter-spacing: -0.025em;
+        line-height: 1.14;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      /* ══════════════ HEADER ══════════════ */
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 80;
+        background: rgba(18, 4, 10, 0.82);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid var(--line);
+        transition:
+          padding 0.3s,
+          background 0.3s;
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        height: 76px;
+      }
+      header.shrunk .nav {
+        height: 64px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex: none;
+      }
+      .brand-mark {
+        width: 42px;
+        height: 42px;
+        border-radius: 12px;
+        flex: none;
+        background: linear-gradient(
+          140deg,
+          var(--maroon) 0%,
+          var(--maroon-400) 55%,
+          var(--gold) 100%
+        );
+        display: grid;
+        place-items: center;
+        box-shadow: 0 6px 20px rgba(141, 21, 58, 0.45);
+      }
+      .brand-mark svg {
+        width: 23px;
+        height: 23px;
+      }
+      .brand-txt {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.1;
+      }
+      .brand-name {
+        font-family: var(--font-head);
+        font-size: 1.06rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+      .brand-sub {
+        font-size: 0.63rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--gold);
+        font-weight: 700;
+        font-family: var(--font-en);
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 26px;
+      }
+      .nav-links a {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--muted);
+        transition: color 0.2s;
+        white-space: nowrap;
+      }
+      .nav-links a:hover {
+        color: var(--gold-soft);
+      }
+
+      .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex: none;
+      }
+
+      /* language toggle */
+      .lang-toggle {
+        display: flex;
+        background: rgba(0, 0, 0, 0.4);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 3px;
+        flex: none;
+      }
+      .lang-btn {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        font-family: var(--font-en);
+        font-size: 0.76rem;
+        font-weight: 700;
+        color: var(--muted);
+        padding: 7px 13px;
+        border-radius: 999px;
+        transition: all 0.22s;
+        letter-spacing: 0.02em;
+        white-space: nowrap;
+      }
+      .lang-btn.active {
+        background: var(--gold);
+        color: var(--maroon-950);
+      }
+      .lang-btn:not(.active):hover {
+        color: var(--text);
+      }
+
+      /* contact button */
+      .btn-contact {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        background: linear-gradient(135deg, var(--gold) 0%, var(--orange) 100%);
+        color: #1c060b;
+        border: none;
+        cursor: pointer;
+        font-family: inherit;
+        font-size: 0.88rem;
+        font-weight: 800;
+        padding: 12px 22px;
+        border-radius: 999px;
+        box-shadow: 0 8px 26px rgba(242, 183, 5, 0.28);
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+        white-space: nowrap;
+      }
+      .btn-contact:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 34px rgba(242, 183, 5, 0.42);
+      }
+      .btn-contact svg {
+        width: 16px;
+        height: 16px;
+        flex: none;
+      }
+
+      /* ══════════════ HERO ══════════════ */
+      .hero {
+        padding: 74px 0 62px;
+        position: relative;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 56px;
+        align-items: center;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        font-size: 0.76rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        color: var(--gold);
+        border: 1px solid rgba(242, 183, 5, 0.3);
+        background: rgba(242, 183, 5, 0.06);
+        padding: 8px 16px;
+        border-radius: 999px;
+        margin-bottom: 26px;
+      }
+      .dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--green-soft);
+        position: relative;
+        flex: none;
+      }
+      .dot::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        background: var(--green-soft);
+        animation: ping 2.2s cubic-bezier(0, 0, 0.2, 1) infinite;
+      }
+      @keyframes ping {
+        0% {
+          transform: scale(1);
+          opacity: 0.85;
+        }
+        75%,
+        100% {
+          transform: scale(2.8);
+          opacity: 0;
+        }
+      }
+
+      .hero h1 {
+        font-size: clamp(2.1rem, 5.4vw, 3.5rem);
+        margin-bottom: 22px;
+      }
+      .hero h1 .hl {
+        background: linear-gradient(100deg, var(--gold) 0%, var(--orange) 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .hero p.lede {
+        font-size: clamp(1rem, 1.9vw, 1.14rem);
+        color: var(--muted);
+        max-width: 56ch;
+        margin-bottom: 34px;
+      }
+
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 13px;
+        margin-bottom: 38px;
+      }
+      .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 9px;
+        background: linear-gradient(135deg, var(--gold) 0%, var(--orange) 100%);
+        color: #1c060b;
+        border: none;
+        cursor: pointer;
+        font-family: inherit;
+        font-size: 1rem;
+        font-weight: 800;
+        padding: 17px 34px;
+        border-radius: 999px;
+        box-shadow: 0 12px 34px rgba(242, 183, 5, 0.3);
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+      }
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 18px 44px rgba(242, 183, 5, 0.45);
+      }
+      .btn-primary svg {
+        width: 17px;
+        height: 17px;
+        flex: none;
+      }
+
+      .btn-outline {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 9px;
+        background: transparent;
+        color: var(--text);
+        border: 1.5px solid rgba(242, 183, 5, 0.32);
+        font-family: inherit;
+        font-size: 0.96rem;
+        font-weight: 700;
+        padding: 16px 30px;
+        border-radius: 999px;
+        cursor: pointer;
+        transition:
+          border-color 0.2s,
+          background 0.2s;
+      }
+      .btn-outline:hover {
+        border-color: var(--gold);
+        background: rgba(242, 183, 5, 0.07);
+      }
+
+      .hero-trust {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .trust {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.83rem;
+        color: var(--muted);
+        font-weight: 600;
+      }
+      .trust svg {
+        width: 15px;
+        height: 15px;
+        color: var(--gold);
+        flex: none;
+      }
+
+      /* hero visual */
+      .hero-visual {
+        position: relative;
+      }
+      .hero-panel {
+        border-radius: 24px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        background: linear-gradient(
+          160deg,
+          var(--maroon-800),
+          var(--maroon-900)
+        );
+        padding: 34px 30px;
+        box-shadow: 0 34px 90px rgba(0, 0, 0, 0.6);
+        position: relative;
+      }
+      .hero-panel::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(
+          90deg,
+          var(--maroon-400),
+          var(--gold),
+          var(--green-soft)
+        );
+      }
+      .panel-title {
+        font-family: var(--font-head);
+        font-size: 1.14rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      .panel-list {
+        display: grid;
+        gap: 13px;
+      }
+      .panel-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 11px;
+        font-size: 0.9rem;
+        color: #e8d9da;
+      }
+      .panel-item .tick {
+        width: 20px;
+        height: 20px;
+        border-radius: 6px;
+        flex: none;
+        margin-top: 2px;
+        background: rgba(11, 93, 78, 0.28);
+        border: 1px solid rgba(18, 135, 111, 0.45);
+        display: grid;
+        place-items: center;
+      }
+      .panel-item .tick svg {
+        width: 11px;
+        height: 11px;
+        color: #3fd3ae;
+      }
+
+      /* ══════════════ SECTIONS ══════════════ */
+      section {
+        padding: 78px 0;
+        position: relative;
+      }
+      .sec-head {
+        max-width: 640px;
+        margin-bottom: 46px;
+      }
+      .sec-head h2 {
+        font-size: clamp(1.7rem, 3.7vw, 2.4rem);
+        margin-bottom: 15px;
+      }
+      .sec-head p {
+        color: var(--muted);
+        font-size: 1.01rem;
+      }
+      .eyebrow {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 0.17em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 14px;
+        font-family: var(--font-en);
+      }
+
+      /* services */
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+        gap: 18px;
+      }
+      .svc {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 30px 26px;
+        transition:
+          border-color 0.28s,
+          transform 0.28s,
+          background 0.28s;
+        position: relative;
+        overflow: hidden;
+      }
+      .svc::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        width: 0;
+        background: linear-gradient(90deg, var(--gold), var(--orange));
+        transition: width 0.4s ease;
+      }
+      .svc:hover {
+        border-color: rgba(242, 183, 5, 0.4);
+        transform: translateY(-4px);
+        background: var(--card-hi);
+      }
+      .svc:hover::after {
+        width: 100%;
+      }
+      .svc-ico {
+        width: 48px;
+        height: 48px;
+        border-radius: 13px;
+        display: grid;
+        place-items: center;
+        margin-bottom: 20px;
+        background: linear-gradient(
+          140deg,
+          rgba(141, 21, 58, 0.5),
+          rgba(141, 21, 58, 0.2)
+        );
+        border: 1px solid rgba(178, 40, 80, 0.4);
+      }
+      .svc-ico svg {
+        width: 23px;
+        height: 23px;
+        color: var(--gold-soft);
+      }
+      .svc h3 {
+        font-size: 1.15rem;
+        margin-bottom: 10px;
+      }
+      .svc .en-sub {
+        font-family: var(--font-en);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 11px;
+        display: block;
+      }
+      .svc p {
+        font-size: 0.9rem;
+        color: var(--muted);
+        line-height: 1.65;
+      }
+
+      /* why us */
+      .why-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 1px;
+        background: var(--line);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        overflow: hidden;
+      }
+      .why-cell {
+        background: var(--maroon-900);
+        padding: 32px 26px;
+      }
+      .why-num {
+        font-family: var(--font-head);
+        font-size: 1.9rem;
+        font-weight: 800;
+        color: var(--gold);
+        line-height: 1;
+        margin-bottom: 10px;
+      }
+      .why-cell h3 {
+        font-size: 1.02rem;
+        margin-bottom: 9px;
+        font-weight: 700;
+      }
+      .why-cell p {
+        font-size: 0.87rem;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      /* process */
+      .steps {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
+        gap: 20px;
+        counter-reset: step;
+      }
+      .step {
+        position: relative;
+        padding-top: 14px;
+      }
+      .step-n {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(140deg, var(--gold), var(--orange));
+        color: var(--maroon-950);
+        font-family: var(--font-en);
+        font-weight: 800;
+        font-size: 1.02rem;
+        margin-bottom: 17px;
+        box-shadow: 0 8px 22px rgba(242, 183, 5, 0.25);
+      }
+      .step h3 {
+        font-size: 1.04rem;
+        margin-bottom: 8px;
+      }
+      .step p {
+        font-size: 0.88rem;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+      .step-line {
+        position: absolute;
+        top: 35px;
+        left: 52px;
+        right: -10px;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          rgba(242, 183, 5, 0.35),
+          transparent
+        );
+      }
+      .step:last-child .step-line {
+        display: none;
+      }
+
+      /* service area */
+      .area {
+        background: linear-gradient(
+          155deg,
+          var(--maroon-800),
+          var(--maroon-900)
+        );
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        padding: clamp(30px, 5vw, 52px);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 42px;
+        align-items: center;
+      }
+      .area h2 {
+        font-size: clamp(1.55rem, 3.2vw, 2.1rem);
+        margin-bottom: 14px;
+      }
+      .area p {
+        color: var(--muted);
+        font-size: 0.98rem;
+        margin-bottom: 26px;
+      }
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+      }
+      .chip {
+        font-size: 0.83rem;
+        font-weight: 600;
+        padding: 8px 15px;
+        border-radius: 999px;
+        background: rgba(242, 183, 5, 0.08);
+        border: 1px solid rgba(242, 183, 5, 0.22);
+        color: var(--gold-soft);
+        font-family: var(--font-en);
+      }
+      .map-card {
+        border-radius: 18px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        background: var(--maroon-950);
+        padding: 26px;
+        display: grid;
+        place-items: center;
+        min-height: 220px;
+        text-align: center;
+      }
+      .map-card .big {
+        font-family: var(--font-head);
+        font-size: 2.4rem;
+        font-weight: 800;
+        color: var(--gold);
+        line-height: 1;
+        margin-bottom: 8px;
+      }
+      .map-card .small {
+        font-size: 0.85rem;
+        color: var(--muted);
+        font-family: var(--font-en);
+      }
+
+      /* promise / CTA band */
+      .band {
+        background: linear-gradient(
+          135deg,
+          var(--maroon) 0%,
+          var(--maroon-700) 48%,
+          var(--maroon-800) 100%
+        );
+        border-radius: 24px;
+        padding: clamp(36px, 6vw, 64px);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        border: 1px solid rgba(242, 183, 5, 0.2);
+      }
+      .band::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          600px 300px at 50% 0%,
+          rgba(242, 183, 5, 0.16),
+          transparent 70%
+        );
+        pointer-events: none;
+      }
+      .band h2 {
+        font-size: clamp(1.7rem, 3.9vw, 2.6rem);
+        margin-bottom: 18px;
+        position: relative;
+        max-width: 22ch;
+        margin-inline: auto;
+      }
+      .band p {
+        color: #f0dedf;
+        max-width: 52ch;
+        margin: 0 auto 34px;
+        position: relative;
+        font-size: 1.03rem;
+      }
+      .band .btn-primary,
+      .band .btn-outline {
+        position: relative;
+      }
+
+      /* footer */
+      footer {
+        border-top: 1px solid var(--line);
+        padding: 46px 0 40px;
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+      .foot-grid {
+        display: grid;
+        grid-template-columns: 1.3fr 1fr 1fr;
+        gap: 38px;
+        margin-bottom: 34px;
+      }
+      .foot-brand {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        margin-bottom: 14px;
+      }
+      .foot-col h4 {
+        font-family: var(--font-head);
+        font-size: 0.95rem;
+        color: var(--text);
+        margin-bottom: 14px;
+        font-weight: 700;
+      }
+      .foot-col ul {
+        list-style: none;
+        display: grid;
+        gap: 9px;
+      }
+      .foot-col a {
+        color: var(--muted);
+        transition: color 0.2s;
+        font-size: 0.87rem;
+      }
+      .foot-col a:hover {
+        color: var(--gold-soft);
+      }
+      .foot-bottom {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 26px;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        font-size: 0.8rem;
+      }
+
+      /* ══════════════ MODAL ══════════════ */
+      .overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 200;
+        background: rgba(10, 2, 5, 0.82);
+        backdrop-filter: blur(9px);
+        -webkit-backdrop-filter: blur(9px);
+        display: grid;
+        place-items: center;
+        padding: 22px;
+        opacity: 0;
+        visibility: hidden;
+        transition:
+          opacity 0.28s,
+          visibility 0.28s;
+      }
+      .overlay.open {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .modal {
+        width: 100%;
+        max-width: 440px;
+        background: linear-gradient(
+          165deg,
+          var(--maroon-800),
+          var(--maroon-900)
+        );
+        border: 1px solid rgba(242, 183, 5, 0.28);
+        border-radius: 24px;
+        padding: 38px 32px 34px;
+        box-shadow: 0 40px 110px rgba(0, 0, 0, 0.72);
+        position: relative;
+        overflow: hidden;
+        transform: translateY(22px) scale(0.97);
+        transition: transform 0.32s cubic-bezier(0.2, 0.9, 0.3, 1.05);
+      }
+      .overlay.open .modal {
+        transform: translateY(0) scale(1);
+      }
+      .modal::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(
+          90deg,
+          var(--maroon-400),
+          var(--gold),
+          var(--green-soft)
+        );
+      }
+      .modal-close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid var(--line);
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+        color: var(--muted);
+        transition:
+          background 0.2s,
+          color 0.2s,
+          transform 0.2s;
+      }
+      .modal-close:hover {
+        background: rgba(255, 255, 255, 0.11);
+        color: var(--text);
+        transform: rotate(90deg);
+      }
+      .modal-close svg {
+        width: 15px;
+        height: 15px;
+      }
+
+      /* modal brand header */
+      .modal-brand {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 13px;
+        margin-bottom: 22px;
+      }
+      .modal-brand .brand-mark {
+        width: 54px;
+        height: 54px;
+        border-radius: 15px;
+        box-shadow: 0 10px 28px rgba(141, 21, 58, 0.5);
+      }
+      .modal-brand .brand-mark svg {
+        width: 29px;
+        height: 29px;
+      }
+      .modal-brand-name {
+        font-family: var(--font-head);
+        font-size: 1.34rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        line-height: 1.15;
+        text-align: center;
+      }
+      .modal-brand-sub {
+        font-family: var(--font-en);
+        font-size: 0.66rem;
+        font-weight: 800;
+        letter-spacing: 0.17em;
+        text-transform: uppercase;
+        color: var(--gold);
+        text-align: center;
+        margin-top: 4px;
+      }
+      .modal-divider {
+        height: 1px;
+        margin: 0 0 26px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(242, 183, 5, 0.38),
+          transparent
+        );
+      }
+
+      .modal h3 {
+        font-size: 1.5rem;
+        text-align: center;
+        margin-bottom: 9px;
+      }
+      .modal-sub {
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.89rem;
+        margin-bottom: 28px;
+      }
+
+      .contact-row {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        background: rgba(0, 0, 0, 0.28);
+        border: 1px solid var(--line);
+        border-radius: 15px;
+        padding: 17px 19px;
+        margin-bottom: 13px;
+        transition:
+          border-color 0.22s,
+          background 0.22s,
+          transform 0.22s;
+      }
+      .contact-row:hover {
+        border-color: rgba(242, 183, 5, 0.5);
+        background: rgba(242, 183, 5, 0.05);
+        transform: translateY(-2px);
+      }
+      .cr-ico {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        flex: none;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(
+          140deg,
+          rgba(242, 183, 5, 0.2),
+          rgba(255, 121, 0, 0.12)
+        );
+        border: 1px solid rgba(242, 183, 5, 0.3);
+      }
+      .cr-ico svg {
+        width: 20px;
+        height: 20px;
+        color: var(--gold);
+      }
+      .cr-body {
+        min-width: 0;
+        flex: 1;
+      }
+      .cr-label {
+        font-size: 0.7rem;
+        font-weight: 800;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 3px;
+        font-family: var(--font-en);
+      }
+      .cr-value {
+        font-family: var(--font-en);
+        font-size: 1.03rem;
+        font-weight: 700;
+        color: var(--text);
+        word-break: break-all;
+        line-height: 1.35;
+      }
+      .cr-arrow {
+        color: var(--gold);
+        flex: none;
+        opacity: 0.5;
+        transition:
+          opacity 0.2s,
+          transform 0.2s;
+      }
+      .contact-row:hover .cr-arrow {
+        opacity: 1;
+        transform: translateX(3px);
+      }
+      .cr-arrow svg {
+        width: 16px;
+        height: 16px;
+      }
+
+      .modal-note {
+        display: flex;
+        align-items: flex-start;
+        gap: 9px;
+        background: rgba(11, 93, 78, 0.16);
+        border: 1px solid rgba(18, 135, 111, 0.3);
+        border-radius: 12px;
+        padding: 13px 15px;
+        margin-top: 20px;
+        font-size: 0.83rem;
+        color: #9fe3ce;
+        line-height: 1.55;
+      }
+      .modal-note svg {
+        width: 15px;
+        height: 15px;
+        flex: none;
+        margin-top: 2px;
+        color: #3fd3ae;
+      }
+
+      /* ══════════════ MOBILE STICKY ══════════════ */
+      .mobile-bar {
+        display: none;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 90;
+        background: rgba(18, 4, 10, 0.94);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-top: 1px solid var(--line);
+        padding: 11px 16px;
+      }
+      .mobile-bar .btn-contact {
+        width: 100%;
+        padding: 15px;
+        font-size: 0.97rem;
+      }
+
+      /* reveal */
+      .reveal {
+        opacity: 0;
+        transform: translateY(26px);
+        transition:
+          opacity 0.7s cubic-bezier(0.2, 0.8, 0.2, 1),
+          transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+      .reveal.in {
+        opacity: 1;
+        transform: none;
+      }
+
+      /* ══════════════ RESPONSIVE ══════════════ */
+      @media (max-width: 1024px) {
+        .hero-grid {
+          grid-template-columns: 1fr;
+          gap: 44px;
+        }
+        .foot-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 30px;
+        }
+      }
+
+      @media (max-width: 880px) {
+        .nav-links {
+          display: none;
+        }
+        .hero {
+          padding: 52px 0 44px;
+        }
+        section {
+          padding: 58px 0;
+        }
+        .area {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+        .mobile-bar {
+          display: block;
+        }
+        body {
+          padding-bottom: 78px;
+        }
+        .step-line {
+          display: none;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .wrap {
+          padding: 0 17px;
+        }
+        .brand-sub {
+          display: none;
+        }
+        .brand-name {
+          font-size: 0.98rem;
+        }
+        .brand-mark {
+          width: 37px;
+          height: 37px;
+          border-radius: 10px;
+        }
+        .brand-mark svg {
+          width: 20px;
+          height: 20px;
+        }
+        .lang-btn {
+          padding: 6px 10px;
+          font-size: 0.72rem;
+        }
+        .nav-right .btn-contact {
+          padding: 11px 16px;
+          font-size: 0.82rem;
+        }
+        .nav-right .btn-contact span {
+          display: none;
+        }
+        .cta-row .btn-primary,
+        .cta-row .btn-outline {
+          width: 100%;
+        }
+        .foot-grid {
+          grid-template-columns: 1fr;
+          gap: 26px;
+        }
+        .modal {
+          padding: 32px 22px 28px;
+          border-radius: 20px;
+        }
+        .modal h3 {
+          font-size: 1.3rem;
+        }
+        .modal-brand .brand-mark {
+          width: 48px;
+          height: 48px;
+          border-radius: 13px;
+        }
+        .modal-brand .brand-mark svg {
+          width: 25px;
+          height: 25px;
+        }
+        .modal-brand-name {
+          font-size: 1.2rem;
+        }
+        .hero-panel {
+          padding: 26px 22px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation: none !important;
+          transition: none !important;
+        }
+        html {
+          scroll-behavior: auto;
+        }
+        .reveal {
+          opacity: 1;
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ══════════════ HEADER ══════════════ -->
+    <header id="hdr">
+      <div class="wrap nav">
+        <a href="#" class="brand" aria-label="Lanka Contracting">
+          <span class="brand-mark">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#1C060B"
+              stroke-width="2.1"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M2 20h20" />
+              <path d="M4 20V9l8-6 8 6v11" />
+              <path d="M9.5 20v-6h5v6" />
+            </svg>
+          </span>
+          <span class="brand-txt">
+            <span class="brand-name">Lanka Contracting</span>
+            <span
+              class="brand-sub"
+              data-ta="கிரேட்டர் டொராண்டோ"
+              data-en="Greater Toronto Area"
+              >கிரேட்டர் டொராண்டோ</span
+            >
+          </span>
+        </a>
+
+        <nav class="nav-links">
+          <a href="#services" data-ta="சேவைகள்" data-en="Services">சேவைகள்</a>
+          <a href="#why" data-ta="எங்களை ஏன்?" data-en="Why Us">எங்களை ஏன்?</a>
+          <a href="#process" data-ta="செயல்முறை" data-en="Process">செயல்முறை</a>
+          <a href="#areas" data-ta="சேவை பகுதிகள்" data-en="Service Areas"
+            >சேவை பகுதிகள்</a
+          >
+        </nav>
+
+        <div class="nav-right">
+          <div class="lang-toggle" role="group" aria-label="Language">
+            <button class="lang-btn active" data-lang="ta" aria-pressed="true">
+              தமிழ்
+            </button>
+            <button class="lang-btn" data-lang="en" aria-pressed="false">
+              English
+            </button>
+          </div>
+          <button class="btn-contact js-contact" type="button">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+              />
+            </svg>
+            <span data-ta="இப்போதே தொடர்பு" data-en="Contact Now"
+              >இப்போதே தொடர்பு</span
+            >
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ══════════════ HERO ══════════════ -->
+    <div class="wrap">
+      <section class="hero">
+        <div class="hero-grid">
+          <div>
+            <div class="badge">
+              <span class="dot"></span>
+              <span
+                data-ta="இலவச மதிப்பீடு — இன்றே அழைக்கவும்"
+                data-en="Free Estimate — Call Today"
+                >இலவச மதிப்பீடு — இன்றே அழைக்கவும்</span
+              >
+            </div>
+
+            <h1
+              data-ta-html="உங்கள் வீட்டிற்கு <span class='hl'>தரமான</span> கட்டுமான சேவை"
+              data-en-html="<span class='hl'>Quality</span> Construction for Your Home"
+            >
+              உங்கள் வீட்டிற்கு <span class="hl">தரமான</span> கட்டுமான சேவை
+            </h1>
+
+            <p
+              class="lede"
+              data-ta="டொராண்டோவில் தமிழ் சமூகத்திற்காக அர்ப்பணிக்கப்பட்ட நம்பகமான கட்டுமான நிறுவனம். ஓடு பதித்தல், மின்சார வேலை, அடித்தள அமைப்பு, முற்றத்து கொட்டகை — அனைத்தும் ஒரே இடத்தில்."
+              data-en="A trusted construction company dedicated to the Tamil community in Toronto. Tiling, electrical, basement finishing, backyard sheds — all under one roof."
+            >
+              டொராண்டோவில் தமிழ் சமூகத்திற்காக அர்ப்பணிக்கப்பட்ட நம்பகமான
+              கட்டுமான நிறுவனம். ஓடு பதித்தல், மின்சார வேலை, அடித்தள அமைப்பு,
+              முற்றத்து கொட்டகை — அனைத்தும் ஒரே இடத்தில்.
+            </p>
+
+            <div class="cta-row">
+              <button class="btn-primary js-contact" type="button">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                  />
+                </svg>
+                <span data-ta="இப்போதே தொடர்பு" data-en="Contact Now"
+                  >இப்போதே தொடர்பு</span
+                >
+              </button>
+              <a
+                href="#services"
+                class="btn-outline"
+                data-ta="சேவைகளைப் பார்க்க"
+                data-en="View Services"
+                >சேவைகளைப் பார்க்க</a
+              >
+            </div>
+
+            <div class="hero-trust">
+              <div class="trust">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+                <span data-ta="உரிமம் பெற்றது" data-en="Licensed"
+                  >உரிமம் பெற்றது</span
+                >
+              </div>
+              <div class="trust">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                <span data-ta="காப்பீடு செய்யப்பட்டது" data-en="Insured"
+                  >காப்பீடு செய்யப்பட்டது</span
+                >
+              </div>
+              <div class="trust">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 6v6l4 2" />
+                </svg>
+                <span data-ta="நேரத்தில் வேலை" data-en="On-Time Work"
+                  >நேரத்தில் வேலை</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal">
+            <div class="hero-panel">
+              <div
+                class="panel-title"
+                data-ta="எங்கள் உறுதிமொழி"
+                data-en="Our Promise"
+              >
+                எங்கள் உறுதிமொழி
+              </div>
+              <div class="panel-list">
+                <div class="panel-item">
+                  <span class="tick"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M20 6L9 17l-5-5" /></svg
+                  ></span>
+                  <span
+                    data-ta="தெளிவான, மறைவில்லாத விலை"
+                    data-en="Clear pricing, no hidden costs"
+                    >தெளிவான, மறைவில்லாத விலை</span
+                  >
+                </div>
+                <div class="panel-item">
+                  <span class="tick"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M20 6L9 17l-5-5" /></svg
+                  ></span>
+                  <span
+                    data-ta="எழுத்துப்பூர்வ உத்தரவாதம்"
+                    data-en="Written workmanship warranty"
+                    >எழுத்துப்பூர்வ உத்தரவாதம்</span
+                  >
+                </div>
+                <div class="panel-item">
+                  <span class="tick"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M20 6L9 17l-5-5" /></svg
+                  ></span>
+                  <span
+                    data-ta="சுத்தமான, மரியாதையான வேலைத்தளம்"
+                    data-en="Clean, respectful job site"
+                    >சுத்தமான, மரியாதையான வேலைத்தளம்</span
+                  >
+                </div>
+                <div class="panel-item">
+                  <span class="tick"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M20 6L9 17l-5-5" /></svg
+                  ></span>
+                  <span
+                    data-ta="தமிழில் நேரடி தொடர்பு"
+                    data-en="Direct communication in Tamil"
+                    >தமிழில் நேரடி தொடர்பு</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ══════════════ SERVICES ══════════════ -->
+    <div class="wrap">
+      <section id="services">
+        <div class="sec-head reveal">
+          <span class="eyebrow" data-ta="எங்கள் சேவைகள்" data-en="Our Services"
+            >எங்கள் சேவைகள்</span
+          >
+          <h2
+            data-ta="வீட்டின் ஒவ்வொரு தேவைக்கும் ஒரே குழு"
+            data-en="One team for every home need"
+          >
+            வீட்டின் ஒவ்வொரு தேவைக்கும் ஒரே குழு
+          </h2>
+          <p
+            data-ta="சிறிய பழுதுபார்ப்பு முதல் முழுமையான புதுப்பித்தல் வரை — தரமான பொருட்கள், அனுபவமிக்க கைவினைஞர்கள், நேரத்தில் ஒப்படைப்பு."
+            data-en="From small repairs to full renovations — quality materials, experienced craftsmen, on-time delivery."
+          >
+            சிறிய பழுதுபார்ப்பு முதல் முழுமையான புதுப்பித்தல் வரை — தரமான
+            பொருட்கள், அனுபவமிக்க கைவினைஞர்கள், நேரத்தில் ஒப்படைப்பு.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="svc reveal">
+            <div class="svc-ico">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="3" y="3" width="7" height="7" rx="1" />
+                <rect x="14" y="3" width="7" height="7" rx="1" />
+                <rect x="3" y="14" width="7" height="7" rx="1" />
+                <rect x="14" y="14" width="7" height="7" rx="1" />
+              </svg>
+            </div>
+            <span class="en-sub">Tiling</span>
+            <h3 data-ta="ஓடு பதித்தல்" data-en="Tiling">ஓடு பதித்தல்</h3>
+            <p
+              data-ta="குளியலறை, சமையலறை, தரை மற்றும் சுவர் ஓடுகள் நேர்த்தியாகப் பதிக்கப்படும். நீர் புகா அமைப்புடன்."
+              data-en="Bathroom, kitchen, floor and wall tile installed with precision and proper waterproofing."
+            >
+              குளியலறை, சமையலறை, தரை மற்றும் சுவர் ஓடுகள் நேர்த்தியாகப்
+              பதிக்கப்படும். நீர் புகா அமைப்புடன்.
+            </p>
+          </article>
+
+          <article class="svc reveal">
+            <div class="svc-ico">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M13 2L4.09 12.97A1 1 0 0 0 4.86 14.5H11l-1 7.5 8.91-10.97A1 1 0 0 0 18.14 9.5H12z"
+                />
+              </svg>
+            </div>
+            <span class="en-sub">Electrical</span>
+            <h3 data-ta="மின்சார வேலை" data-en="Electrical Work">
+              மின்சார வேலை
+            </h3>
+            <p
+              data-ta="வயரிங், விளக்கு அமைப்பு, பேனல் மாற்றம், EV சார்ஜர் — உரிமம் பெற்ற மின்சார நிபுணர்களால்."
+              data-en="Wiring, lighting, panel upgrades, EV chargers — by licensed electrical professionals."
+            >
+              வயரிங், விளக்கு அமைப்பு, பேனல் மாற்றம், EV சார்ஜர் — உரிமம் பெற்ற
+              மின்சார நிபுணர்களால்.
+            </p>
+          </article>
+
+          <article class="svc reveal">
+            <div class="svc-ico">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M3 21h18" />
+                <path d="M5 21V8l7-5 7 5v13" />
+                <path d="M9 21v-5h6v5" />
+              </svg>
+            </div>
+            <span class="en-sub">Basement Finishing</span>
+            <h3 data-ta="அடித்தள அமைப்பு" data-en="Basement Finishing">
+              அடித்தள அமைப்பு
+            </h3>
+            <p
+              data-ta="உங்கள் அடித்தளத்தை கூடுதல் வாழ்க்கை அறை, வாடகை அலகு அல்லது அலுவலகமாக மாற்றுகிறோம்."
+              data-en="Turn your basement into an extra living space, rental unit, or home office."
+            >
+              உங்கள் அடித்தளத்தை கூடுதல் வாழ்க்கை அறை, வாடகை அலகு அல்லது
+              அலுவலகமாக மாற்றுகிறோம்.
+            </p>
+          </article>
+
+          <article class="svc reveal">
+            <div class="svc-ico">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M3 10l9-7 9 7" />
+                <path d="M5 10v11h14V10" />
+                <path d="M9 21v-7h6v7" />
+              </svg>
+            </div>
+            <span class="en-sub">Backyard Sheds</span>
+            <h3 data-ta="முற்றத்து கொட்டகை" data-en="Backyard Sheds">
+              முற்றத்து கொட்டகை
+            </h3>
+            <p
+              data-ta="உங்கள் முற்றத்திற்கு ஏற்ற தனிப்பயன் கொட்டகைகள், கிடங்குகள் மற்றும் கார்போர்ட் அமைப்புகள்."
+              data-en="Custom sheds, storage units and carports built to fit your backyard."
+            >
+              உங்கள் முற்றத்திற்கு ஏற்ற தனிப்பயன் கொட்டகைகள், கிடங்குகள் மற்றும்
+              கார்போர்ட் அமைப்புகள்.
+            </p>
+          </article>
+
+          <article class="svc reveal">
+            <div class="svc-ico">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M4 12h16" />
+                <path d="M6 12V6a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v6" />
+                <path d="M8 12v3a4 4 0 0 0 4 4 4 4 0 0 0 4-4v-3" />
+              </svg>
+            </div>
+            <span class="en-sub">Bathroom Renovation</span>
+            <h3 data-ta="குளியலறை புதுப்பித்தல்" data-en="Bathroom Renovation">
+              குளியலறை புதுப்பித்தல்
+            </h3>
+            <p
+              data-ta="நவீன வடிவமைப்பில் முழுமையான குளியலறை புதுப்பித்தல் — குழாய், ஓடு, மின்சாரம் அனைத்தும்."
+              data-en="Complete bathroom renovation in modern design — plumbing, tile and electrical included."
+            >
+              நவீன வடிவமைப்பில் முழுமையான குளியலறை புதுப்பித்தல் — குழாய், ஓடு,
+              மின்சாரம் அனைத்தும்.
+            </p>
+          </article>
+
+          <article class="svc reveal">
+            <div class="svc-ico">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <path d="M3 9h18" />
+                <circle cx="7.5" cy="6" r="1" />
+              </svg>
+            </div>
+            <span class="en-sub">Kitchen Renovation</span>
+            <h3 data-ta="சமையலறை புதுப்பித்தல்" data-en="Kitchen Renovation">
+              சமையலறை புதுப்பித்தல்
+            </h3>
+            <p
+              data-ta="அழகான, பயனுள்ள சமையலறை அமைப்பு — கேபினட், கவுன்டர்டாப், பின்புற ஓடு மற்றும் விளக்குகள்."
+              data-en="Beautiful, functional kitchens — cabinets, countertops, backsplash and lighting."
+            >
+              அழகான, பயனுள்ள சமையலறை அமைப்பு — கேபினட், கவுன்டர்டாப், பின்புற
+              ஓடு மற்றும் விளக்குகள்.
+            </p>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <!-- ══════════════ WHY US ══════════════ -->
+    <div class="wrap">
+      <section id="why">
+        <div class="sec-head reveal">
+          <span
+            class="eyebrow"
+            data-ta="எங்களை ஏன் தேர்வு செய்ய வேண்டும்"
+            data-en="Why Choose Us"
+            >எங்களை ஏன் தேர்வு செய்ய வேண்டும்</span
+          >
+          <h2
+            data-ta="நம்பிக்கையே எங்கள் அடித்தளம்"
+            data-en="Trust is our foundation"
+          >
+            நம்பிக்கையே எங்கள் அடித்தளம்
+          </h2>
+          <p
+            data-ta="உங்கள் வீடு உங்கள் மிகப்பெரிய முதலீடு. அதை யாரிடம் ஒப்படைக்கிறீர்கள் என்பது முக்கியம்."
+            data-en="Your home is your biggest investment. Who you hand it to matters."
+          >
+            உங்கள் வீடு உங்கள் மிகப்பெரிய முதலீடு. அதை யாரிடம் ஒப்படைக்கிறீர்கள்
+            என்பது முக்கியம்.
+          </p>
+        </div>
+
+        <div class="why-grid reveal">
+          <div class="why-cell">
+            <div class="why-num">15+</div>
+            <h3 data-ta="ஆண்டுகள் அனுபவம்" data-en="Years of Experience">
+              ஆண்டுகள் அனுபவம்
+            </h3>
+            <p
+              data-ta="GTA முழுவதும் நூற்றுக்கணக்கான வீடுகளில் வேலை முடித்த அனுபவம்."
+              data-en="Hundreds of homes completed across the GTA."
+            >
+              GTA முழுவதும் நூற்றுக்கணக்கான வீடுகளில் வேலை முடித்த அனுபவம்.
+            </p>
+          </div>
+          <div class="why-cell">
+            <div class="why-num">$0</div>
+            <h3 data-ta="இலவச மதிப்பீடு" data-en="Free Estimate">
+              இலவச மதிப்பீடு
+            </h3>
+            <p
+              data-ta="இடத்திற்கு வந்து பார்த்து, எழுத்துப்பூர்வமாக விலை தருகிறோம்."
+              data-en="We visit, assess, and give you a written quote."
+            >
+              இடத்திற்கு வந்து பார்த்து, எழுத்துப்பூர்வமாக விலை தருகிறோம்.
+            </p>
+          </div>
+          <div class="why-cell">
+            <div class="why-num">100%</div>
+            <h3 data-ta="வேலை உத்தரவாதம்" data-en="Workmanship Warranty">
+              வேலை உத்தரவாதம்
+            </h3>
+            <p
+              data-ta="எங்கள் வேலையில் குறை ஏற்பட்டால், இலவசமாக சரிசெய்து தருகிறோம்."
+              data-en="If something isn't right, we fix it at no cost."
+            >
+              எங்கள் வேலையில் குறை ஏற்பட்டால், இலவசமாக சரிசெய்து தருகிறோம்.
+            </p>
+          </div>
+          <div class="why-cell">
+            <div class="why-num">தமிழ்</div>
+            <h3 data-ta="உங்கள் மொழியில்" data-en="In Your Language">
+              உங்கள் மொழியில்
+            </h3>
+            <p
+              data-ta="திட்டம் முதல் ஒப்படைப்பு வரை தமிழில் தெளிவான தொடர்பு."
+              data-en="Clear communication in Tamil from plan to handover."
+            >
+              திட்டம் முதல் ஒப்படைப்பு வரை தமிழில் தெளிவான தொடர்பு.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ══════════════ PROCESS ══════════════ -->
+    <div class="wrap">
+      <section id="process">
+        <div class="sec-head reveal">
+          <span
+            class="eyebrow"
+            data-ta="எப்படி வேலை செய்கிறோம்"
+            data-en="How It Works"
+            >எப்படி வேலை செய்கிறோம்</span
+          >
+          <h2 data-ta="நான்கு எளிய படிகள்" data-en="Four simple steps">
+            நான்கு எளிய படிகள்
+          </h2>
+        </div>
+
+        <div class="steps reveal">
+          <div class="step">
+            <div class="step-n">1</div>
+            <div class="step-line"></div>
+            <h3 data-ta="தொடர்பு கொள்ளுங்கள்" data-en="Get in Touch">
+              தொடர்பு கொள்ளுங்கள்
+            </h3>
+            <p
+              data-ta="அழைக்கவும் அல்லது மின்னஞ்சல் அனுப்பவும். உங்கள் தேவையைக் கேட்கிறோம்."
+              data-en="Call or email us. We listen to what you need."
+            >
+              அழைக்கவும் அல்லது மின்னஞ்சல் அனுப்பவும். உங்கள் தேவையைக்
+              கேட்கிறோம்.
+            </p>
+          </div>
+          <div class="step">
+            <div class="step-n">2</div>
+            <div class="step-line"></div>
+            <h3 data-ta="இலவச மதிப்பீடு" data-en="Free Estimate">
+              இலவச மதிப்பீடு
+            </h3>
+            <p
+              data-ta="இடத்திற்கு வந்து பார்த்து, தெளிவான எழுத்துப்பூர்வ விலை தருகிறோம்."
+              data-en="We visit the site and provide a clear written quote."
+            >
+              இடத்திற்கு வந்து பார்த்து, தெளிவான எழுத்துப்பூர்வ விலை தருகிறோம்.
+            </p>
+          </div>
+          <div class="step">
+            <div class="step-n">3</div>
+            <div class="step-line"></div>
+            <h3 data-ta="வேலை தொடக்கம்" data-en="Work Begins">வேலை தொடக்கம்</h3>
+            <p
+              data-ta="ஒப்புக்கொண்ட தேதியில் தொடங்கி, நேரத்தில் முடிக்கிறோம்."
+              data-en="We start on the agreed date and finish on schedule."
+            >
+              ஒப்புக்கொண்ட தேதியில் தொடங்கி, நேரத்தில் முடிக்கிறோம்.
+            </p>
+          </div>
+          <div class="step">
+            <div class="step-n">4</div>
+            <h3 data-ta="ஒப்படைப்பு" data-en="Handover">ஒப்படைப்பு</h3>
+            <p
+              data-ta="சுத்தம் செய்து, உத்தரவாத ஆவணத்துடன் வேலையை ஒப்படைக்கிறோம்."
+              data-en="We clean up and hand over with your warranty document."
+            >
+              சுத்தம் செய்து, உத்தரவாத ஆவணத்துடன் வேலையை ஒப்படைக்கிறோம்.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ══════════════ SERVICE AREAS ══════════════ -->
+    <div class="wrap">
+      <section id="areas">
+        <div class="area reveal">
+          <div>
+            <span
+              class="eyebrow"
+              data-ta="சேவை பகுதிகள்"
+              data-en="Service Areas"
+              >சேவை பகுதிகள்</span
+            >
+            <h2
+              data-ta="கிரேட்டர் டொராண்டோ முழுவதும்"
+              data-en="Across the Greater Toronto Area"
+            >
+              கிரேட்டர் டொராண்டோ முழுவதும்
+            </h2>
+            <p
+              data-ta="நாங்கள் சேவை செய்யும் பகுதிகளில் நீங்கள் இருக்கிறீர்களா? உறுதிப்படுத்த அழையுங்கள்."
+              data-en="Not sure if we cover your area? Give us a call and we'll confirm."
+            >
+              நாங்கள் சேவை செய்யும் பகுதிகளில் நீங்கள் இருக்கிறீர்களா?
+              உறுதிப்படுத்த அழையுங்கள்.
+            </p>
+            <div class="chips">
+              <span class="chip">Scarborough</span>
+              <span class="chip">North York</span>
+              <span class="chip">Etobicoke</span>
+              <span class="chip">Mississauga</span>
+              <span class="chip">Brampton</span>
+              <span class="chip">Markham</span>
+              <span class="chip">Vaughan</span>
+              <span class="chip">Pickering</span>
+              <span class="chip">Ajax</span>
+              <span class="chip">Richmond Hill</span>
+            </div>
+          </div>
+          <div class="map-card">
+            <div>
+              <div class="big">GTA</div>
+              <div class="small">Greater Toronto Area · Ontario</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ══════════════ CTA BAND ══════════════ -->
+    <div class="wrap">
+      <section style="padding-top: 20px">
+        <div class="band reveal">
+          <h2
+            data-ta="உங்கள் அடுத்த திட்டத்தைப் பற்றி பேசலாம்"
+            data-en="Let's talk about your next project"
+          >
+            உங்கள் அடுத்த திட்டத்தைப் பற்றி பேசலாம்
+          </h2>
+          <p
+            data-ta="இலவச மதிப்பீடு. மறைவான கட்டணம் இல்லை. வாக்குவாதம் இல்லை. வெறும் தெளிவான பதில்."
+            data-en="Free estimate. No hidden fees. No pressure. Just a clear answer."
+          >
+            இலவச மதிப்பீடு. மறைவான கட்டணம் இல்லை. வாக்குவாதம் இல்லை. வெறும்
+            தெளிவான பதில்.
+          </p>
+          <div
+            class="cta-row"
+            style="justify-content: center; margin-bottom: 0"
+          >
+            <button class="btn-primary js-contact" type="button">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                />
+              </svg>
+              <span data-ta="இப்போதே தொடர்பு" data-en="Contact Now"
+                >இப்போதே தொடர்பு</span
+              >
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ══════════════ FOOTER ══════════════ -->
+    <footer>
+      <div class="wrap">
+        <div class="foot-grid">
+          <div>
+            <div class="foot-brand">
+              <span
+                class="brand-mark"
+                style="width: 36px; height: 36px; border-radius: 10px"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#1C060B"
+                  stroke-width="2.1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  style="width: 19px; height: 19px"
+                >
+                  <path d="M2 20h20" />
+                  <path d="M4 20V9l8-6 8 6v11" />
+                  <path d="M9.5 20v-6h5v6" />
+                </svg>
+              </span>
+              <span class="brand-name" style="font-size: 1.02rem"
+                >Lanka Contracting</span
+              >
+            </div>
+            <p
+              style="font-size: 0.86rem; line-height: 1.6; max-width: 34ch"
+              data-ta="கிரேட்டர் டொராண்டோ பகுதியில் தமிழ் சமூகத்திற்கான நம்பகமான கட்டுமான சேவை."
+              data-en="Trusted construction services for the Tamil community across the Greater Toronto Area."
+            >
+              கிரேட்டர் டொராண்டோ பகுதியில் தமிழ் சமூகத்திற்கான நம்பகமான கட்டுமான
+              சேவை.
+            </p>
+          </div>
+
+          <div class="foot-col">
+            <h4 data-ta="சேவைகள்" data-en="Services">சேவைகள்</h4>
+            <ul>
+              <li>
+                <a href="#services" data-ta="ஓடு பதித்தல்" data-en="Tiling"
+                  >ஓடு பதித்தல்</a
+                >
+              </li>
+              <li>
+                <a href="#services" data-ta="மின்சார வேலை" data-en="Electrical"
+                  >மின்சார வேலை</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  data-ta="அடித்தள அமைப்பு"
+                  data-en="Basements"
+                  >அடித்தள அமைப்பு</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  data-ta="முற்றத்து கொட்டகை"
+                  data-en="Backyard Sheds"
+                  >முற்றத்து கொட்டகை</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="foot-col">
+            <h4 data-ta="தொடர்பு" data-en="Contact">தொடர்பு</h4>
+            <ul>
+              <li>
+                <a
+                  href="#"
+                  class="js-contact"
+                  data-ta="இப்போதே தொடர்பு"
+                  data-en="Contact Now"
+                  >இப்போதே தொடர்பு</a
+                >
+              </li>
+              <li><a href="#" class="js-contact" id="footPhone">—</a></li>
+              <li><a href="#" class="js-contact" id="footEmail">—</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="foot-bottom">
+          <span
+            >© <span id="yr"></span> Lanka Contracting.
+            <span
+              data-ta="அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை."
+              data-en="All rights reserved."
+              >அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</span
+            ></span
+          >
+          <span
+            data-ta="கிரேட்டர் டொராண்டோ, ஒன்டாரியோ"
+            data-en="Greater Toronto Area, Ontario"
+            >கிரேட்டர் டொராண்டோ, ஒன்டாரியோ</span
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!-- ══════════════ MOBILE STICKY BAR ══════════════ -->
+    <div class="mobile-bar">
+      <button class="btn-contact js-contact" type="button">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.4"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+          />
+        </svg>
+        <span data-ta="இப்போதே தொடர்பு கொள்ளுங்கள்" data-en="Contact Now"
+          >இப்போதே தொடர்பு கொள்ளுங்கள்</span
+        >
+      </button>
+    </div>
+
+    <!-- ══════════════ CONTACT MODAL ══════════════ -->
+    <div
+      class="overlay"
+      id="contactOverlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+    >
+      <div class="modal">
+        <button class="modal-close" id="modalClose" aria-label="Close">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.6"
+            stroke-linecap="round"
+          >
+            <path d="M18 6L6 18M6 6l12 12" />
+          </svg>
+        </button>
+
+        <!-- ✅ BRAND HEADER (new) -->
+        <div class="modal-brand">
+          <span class="brand-mark">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#1C060B"
+              stroke-width="2.1"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M2 20h20" />
+              <path d="M4 20V9l8-6 8 6v11" />
+              <path d="M9.5 20v-6h5v6" />
+            </svg>
+          </span>
+          <div>
+            <div class="modal-brand-name" id="modalCompany">
+              Lanka Contracting
+            </div>
+            <div
+              class="modal-brand-sub"
+              data-ta="கிரேட்டர் டொராண்டோ"
+              data-en="Greater Toronto Area"
+            >
+              கிரேட்டர் டொராண்டோ
+            </div>
+          </div>
+        </div>
+        <div class="modal-divider"></div>
+
+        <h3 id="modalTitle" data-ta="தொடர்பு கொள்ளுங்கள்" data-en="Contact Us">
+          தொடர்பு கொள்ளுங்கள்
+        </h3>
+        <p
+          class="modal-sub"
+          data-ta="இலவச மதிப்பீட்டிற்கு இன்றே அழையுங்கள்"
+          data-en="Call today for your free estimate"
+        >
+          இலவச மதிப்பீட்டிற்கு இன்றே அழையுங்கள்
+        </p>
+
+        <!-- PHONE -->
+        <a class="contact-row" id="phoneRow" href="#">
+          <span class="cr-ico">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.1"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+              />
+            </svg>
+          </span>
+          <span class="cr-body">
+            <span class="cr-label" data-ta="தொலைபேசி" data-en="Phone"
+              >தொலைபேசி</span
+            >
+            <span class="cr-value" id="modalPhone">—</span>
+          </span>
+          <span class="cr-arrow">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </span>
+        </a>
+
+        <!-- EMAIL -->
+        <a class="contact-row" id="emailRow" href="#">
+          <span class="cr-ico">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.1"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="M22 6l-10 7L2 6" />
+            </svg>
+          </span>
+          <span class="cr-body">
+            <span class="cr-label" data-ta="மின்னஞ்சல்" data-en="Email"
+              >மின்னஞ்சல்</span
+            >
+            <span class="cr-value" id="modalEmail">—</span>
+          </span>
+          <span class="cr-arrow">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </span>
+        </a>
+
+        <div class="modal-note">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.3"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 16v-4M12 8h.01" />
+          </svg>
+          <span
+            data-ta="இலவச மதிப்பீடு · மறைவான கட்டணம் இல்லை · GTA முழுவதும் சேவை"
+            data-en="Free estimate · No hidden fees · Serving the entire GTA"
+          >
+            இலவச மதிப்பீடு · மறைவான கட்டணம் இல்லை · GTA முழுவதும் சேவை
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        "use strict";
+
+        /* ═══════════════════════════════════════════════════════════
+     ⚙️  CONTACT DETAILS — CHANGE THESE LINES ONLY
+     Everything on the page (modal, footer, links) updates from here.
+     ═══════════════════════════════════════════════════════════ */
+        const CONTACT = {
+          company: "Lanka Contracting", // ← modal company name
+          phone: "705-702-0882",
+          email: "lankacontracting@gmail.com",
+          phoneLabel: "705-702-0882", // display format (optional)
+          emailLabel: "lankacontracting@gmail.com",
+        };
+        /* ═══════════════════════════════════════════════════════════ */
+
+        /* ---------- helpers ---------- */
+        const $ = (s, c) => (c || document).querySelector(s);
+        const $$ = (s, c) => Array.from((c || document).querySelectorAll(s));
+
+        const telHref =
+          "tel:+1" + CONTACT.phone.replace(/\D/g, "").replace(/^1/, "");
+        const mailHref = "mailto:" + CONTACT.email;
+
+        /* ---------- inject contact info ---------- */
+        $("#modalCompany").textContent = CONTACT.company;
+        $("#modalPhone").textContent = CONTACT.phoneLabel;
+        $("#modalEmail").textContent = CONTACT.emailLabel;
+        $("#phoneRow").setAttribute("href", telHref);
+        $("#emailRow").setAttribute("href", mailHref);
+
+        const footPhone = $("#footPhone");
+        const footEmail = $("#footEmail");
+        if (footPhone) {
+          footPhone.textContent = CONTACT.phoneLabel;
+          footPhone.setAttribute("href", telHref);
+        }
+        if (footEmail) {
+          footEmail.textContent = CONTACT.emailLabel;
+          footEmail.setAttribute("href", mailHref);
+        }
+
+        /* ═══════════ LANGUAGE ═══════════ */
+        const TA = "ta",
+          EN = "en";
+
+        function setLang(lang) {
+          document.documentElement.lang = lang;
+
+          $$("[data-ta]").forEach((el) => {
+            const v = el.getAttribute("data-" + lang);
+            if (v !== null) el.textContent = v;
+          });
+
+          $$("[data-ta-html]").forEach((el) => {
+            const v = el.getAttribute("data-" + lang + "-html");
+            if (v !== null) el.innerHTML = v;
+          });
+
+          $$(".lang-btn").forEach((b) => {
+            const on = b.dataset.lang === lang;
+            b.classList.toggle("active", on);
+            b.setAttribute("aria-pressed", on ? "true" : "false");
+          });
+
+          try {
+            localStorage.setItem("lc-lang", lang);
+          } catch (e) {}
+        }
+
+        $$(".lang-btn").forEach((btn) => {
+          btn.addEventListener("click", () => setLang(btn.dataset.lang));
+        });
+
+        // restore saved language, default Tamil
+        /*let saved = null;
+        try {
+          saved = localStorage.getItem("lc-lang");
+        } catch (e) {}
+        setLang(saved === EN ? EN : TA);*/
+        setLang(TA); // default Tamil
+
+        /* ═══════════ MODAL ═══════════ */
+        const overlay = $("#contactOverlay");
+        const closeBtn = $("#modalClose");
+        let lastFocused = null;
+
+        function openModal() {
+          lastFocused = document.activeElement;
+          overlay.classList.add("open");
+          document.body.style.overflow = "hidden";
+          setTimeout(() => closeBtn.focus(), 260);
+        }
+
+        function closeModal() {
+          overlay.classList.remove("open");
+          document.body.style.overflow = "";
+          if (lastFocused && lastFocused.focus) lastFocused.focus();
+        }
+
+        $$(".js-contact").forEach((el) => {
+          el.addEventListener("click", (e) => {
+            e.preventDefault();
+            openModal();
+          });
+        });
+
+        closeBtn.addEventListener("click", closeModal);
+
+        overlay.addEventListener("click", (e) => {
+          if (e.target === overlay) closeModal();
+        });
+
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape" && overlay.classList.contains("open"))
+            closeModal();
+        });
+
+        // simple focus trap
+        overlay.addEventListener("keydown", (e) => {
+          if (e.key !== "Tab" || !overlay.classList.contains("open")) return;
+          const focusables = $$("a[href], button:not([disabled])", overlay);
+          if (!focusables.length) return;
+          const first = focusables[0],
+            last = focusables[focusables.length - 1];
+          if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+          } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+          }
+        });
+
+        /* ═══════════ HEADER SHRINK ═══════════ */
+        const hdr = $("#hdr");
+        let ticking = false;
+        window.addEventListener(
+          "scroll",
+          () => {
+            if (ticking) return;
+            ticking = true;
+            requestAnimationFrame(() => {
+              hdr.classList.toggle("shrunk", window.scrollY > 40);
+              ticking = false;
+            });
+          },
+          { passive: true },
+        );
+
+        /* ═══════════ REVEAL ON SCROLL ═══════════ */
+        if ("IntersectionObserver" in window) {
+          const io = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((en) => {
+                if (en.isIntersecting) {
+                  en.target.classList.add("in");
+                  io.unobserve(en.target);
+                }
+              });
+            },
+            { threshold: 0.12, rootMargin: "0px 0px -40px 0px" },
+          );
+
+          $$(".reveal").forEach((el) => io.observe(el));
+        } else {
+          $$(".reveal").forEach((el) => el.classList.add("in"));
+        }
+
+        /* ═══════════ YEAR ═══════════ */
+        $("#yr").textContent = new Date().getFullYear();
+      })();
+    </script>
+  </body>
+</html>
